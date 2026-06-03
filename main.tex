@@ -1,0 +1,78 @@
+\documentclass[a4paper,11pt]{book}
+
+\input{preambule}
+\input{new_command}
+
+\begin{document}
+
+\dominitoc    % Used to make the big table of content 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+
+% Title / useless
+\title{Reconstruction tomographique avancée pour l'imagerie dentaire}
+\author{Louise Friot-{}-Giroux}
+\date{\today}
+
+% Page of title (imported in pdf) -> modify
+\includepdf{Preambule/page_garde_these.pdf}  
+~\thispagestyle{empty}\newpage
+
+% List of doctoral schools
+\includepdf{Preambule/ecoles_doctorales_2022.pdf}  % update/remove/modify
+\thispagestyle{empty}
+
+% Citation [optional]
+\include{citation}
+\thispagestyle{empty}
+
+% Thanks [optional]
+\include{Remerciements}
+\thispagestyle{empty}
+
+% Table of content
+\newgeometry{hmargin=2.3cm,vmargin=2.5cm}
+{\hypersetup{linkcolor=black}
+\tableofcontents
+\adjustmtc}   % If the mini table of content doesn't fit the right chapter
+
+% Lists of figures and tables
+{\hypersetup{linkcolor=colorthesis2}
+\listoffigures   
+\listoftables}
+
+\restoregeometry
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+
+\include{Introduction}
+
+\include{Chap1}
+
+\include{Conclusion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+
+\cleardoublepage
+\include{ownpub}
+
+% Folio administratif
+\thispagestyle{empty}
+\newpage \thispagestyle{empty} ~ 
+\includepdf{Preambule/TH0940-attestation_Compilatio2.pdf}
+\newpage \thispagestyle{empty} ~ 
+\newpage \thispagestyle{empty} ~ 
+\newpage
+\includepdf{Preambule/folio_administratif_0216.pdf}
+\let\clearpage\relax    % To remove the last empty page
+
+
+
+
+\end{document}

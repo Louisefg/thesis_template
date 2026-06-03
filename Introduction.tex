@@ -1,0 +1,54 @@
+\chapter*{Introduction}
+	\graphicspath{{Introduction/}}
+	\addcontentsline{toc}{chapter}{Introduction}
+	\label{chap:introduction}
+
+\subsection*{Contextes et objectifs}
+
+% Carestream
+Cette thèse a été réalisée au sein du laboratoire d'imagerie médicale CREATIS en collaboration avec l'entreprise Carestream Dental. L'entreprise Carestream Dental développe des dispositifs à base de rayons X intra et extraoraux, des solutions CAD/CAM{\hypersetup{linkcolor=black}\footnote{Conception et fabrication assistées par ordinateur.}} et des logiciels pour l'imagerie. Ces systèmes sont destinés à l'étude de la région maxillo-faciale et s'adressent à des dentistes, des spécialistes et des radiologues.
+Leur utilisation se popularise et demande la mise en place de nouvelles technologies de traitement d'image et d'analyse. 
+
+% Les Dents
+La dentisterie a beaucoup évolué au cours du siècle dernier, en grande partie grâce aux progrès de la technologie d'imagerie. Les rayons X ont été découverts en 1895, et depuis lors, l'imagerie médicale par rayons X a joué un rôle de plus en plus important dans tous les domaines, du diagnostic à la planification du traitement. Aujourd'hui, l'imagerie dentaire représente une part essentielle des soins dentaires de routine, permettant aux dentistes de détecter les problèmes à un stade précoce et de fournir un traitement plus efficace. L'imagerie dentaire peut être utilisée pour examiner les dents, les mâchoires et les structures environnantes, et peut aider à diagnostiquer un large éventail de problèmes. 
+
+% Scanner Carestream
+Parmi les équipements proposés par l'entreprise, une gamme de scanners de tomographie à faisceau conique (Cone-Beam Computed Tomography : CBCT) est commercialisée. Ces scanners permettent de mettre à portée des praticiens l'acquisition de données 3D pour un coût financier et temporel raisonnable, ainsi qu'un impact radiologique faible pour les patients. Le CBCT est largement utilisé en imagerie dentaire, il fournit des images tridimensionnelles du patient à partir de mesures extérieures de celui-ci. Le rayonnement X transmis par la matière est mesuré et les tissus sont reconstruits à partir de ces mesures.
+
+% Rayons X mauvais pour la santé
+Cependant, les rayons X sont ionisants, ils peuvent endommager l'ADN des cellules et être la source de cancers. Ainsi, l'un des défis de l'imagerie médicale est de réduire la dose d'exposition aux radiations, tout en obtenant des images de haute qualité. Cela est particulièrement important pour la tomographie, qui utilise une dose de rayonnement plus élevée que les radiographies.
+
+% Problème reconstruction faible dose
+La reconstruction des images en faible dose pose cependant des problèmes, car elle peut provoquer des artefacts qui rendent l'interprétation des images difficile. De nouveaux algorithmes de reconstruction sont développés pour améliorer la qualité des images. La reconstruction d'images 3D en CBCT avec des algorithmes analytiques proposée jusqu'à présent par l'entreprise a l'avantage d'être rapide, mais les artefacts liés à l'angle limité, aux projections manquantes, à la tomographie locale d'une région d'intérêt ou encore la présence de bruit, peuvent diminuer la qualité de l'image. 
+
+% Méthodes itératives
+Les méthodes de reconstruction itératives avec prise en compte d'informations a priori semblent mieux adaptées dans une perspective de réduction du nombre de projections et de la dose au patient. Le premier objectif de cette thèse est de définir des méthodes de reconstruction itératives basées sur des techniques de régularisation avec des critères adaptés à l'imagerie orale et d'identifier les algorithmes de résolution du problème contraint les plus rapides et les plus fiables. 
+
+% Deep learning
+Depuis quelques années, les méthodes d'apprentissage profond émergent en imagerie médicale au vu des excellents résultats obtenus en traitement d'image classique. Ces méthodes surpassent les méthodes traditionnelles pour le débruitage, la segmentation et la reconnaissance d'images. Leur application à la tomographie pourrait repousser les limites de l'imagerie médicale, permettant un meilleur diagnostic et une réduction de la dose. Le second objectif de cette thèse est d'étudier le potentiel de ce type de méthode et de les tester dans le cadre de la reconstruction tomographique en imagerie dentaire faible-dose. 
+
+\subsection*{Contributions et organisation du manuscrit}
+
+% Chap1 et Chap2
+Le chapitre \ref{chap:1} présente en détail le principe de la tomographie. La chaîne d'acquisition d'une radiographie est rapidement décrite, puis les caractéristiques importantes de la tomographie, nécessaires à la compréhension de la suite de la thèse, sont présentées. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bibliographystyle{dcu}
+\bibliography{bib}

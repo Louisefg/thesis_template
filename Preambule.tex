@@ -1,0 +1,187 @@
+% Commandes de base
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}     
+\usepackage{newpxtext}  % palatino font
+
+
+\usepackage[sectionbib]{natbib}  % the biblio is a section instead of a chapter
+\usepackage{chapterbib} % to have a bibliography per chapter
+%\usepackage{bib-fr}
+%\usepackage{anyfontsize}
+
+\usepackage[french]{babel}
+
+% Maths package
+\usepackage{textcomp}        % required to get special symbols
+\usepackage{amsmath,expl3}   % must be loaded before amsthm, if using
+\usepackage{amssymb}         % pour utiliser \mathbb
+\usepackage{amsfonts}
+\usepackage{amsthm}          % must be loaded before newtxmath
+\usepackage[vvarbb,subscriptcorrection]{newtxmath}  % STIX Bbb
+\usepackage{bm}              % load after all math to give access to bold math
+
+\usepackage{graphicx, wrapfig}
+\usepackage{array}
+\usepackage{xcolor}		
+\usepackage{geometry}
+\geometry{hmargin=2.8cm,vmargin=2.5cm}
+
+% Algorithm
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e} 
+\SetAlgorithmName{Algorithme}{algorithme}{Liste d'algorithmes}
+
+\usepackage{fullpage}
+\usepackage{eso-pic}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{multirow}	
+\usepackage{multicol} 
+\usepackage[notquote]{hanging} % for ownpub chapter, do the indentation manually
+
+\usepackage{perpage}    
+\MakePerPage{footnote}			% reset to 1 footnote number at each page
+\usepackage{footnote}
+\usepackage{float}      % to force the place of figure with [H]
+\usepackage{listings}
+\usepackage{wrapfig}
+\usepackage[lofdepth=1,lotdepth]{subfig}
+\usepackage{enumitem}
+
+\usepackage[backref=page]{hyperref}   % hypertext links, backref : to add the backref
+									  % page at the end of bibliography citation
+\hypersetup{colorlinks=true,allbordercolors=white,citecolor=red}
+
+\usepackage{import}     % for importfrom{pathimages/}{fichier}
+\usepackage{pdfpages}
+
+\makesavenoteenv{tabular}		% to allow footnotes in tables
+
+% Captions
+\usepackage{caption}
+\definecolor{colorthesis}{HTML}{631D44}
+\usepackage[font={color=colorthesis}]{caption}
+\captionsetup[table]{name=Tableau}
+\usepackage{makecell}
+
+%%%%%%%%%%%%%%%%%%%%
+\usepackage{silence}    % to remove annoying warnings
+\WarningFilter{minitoc(hints)}{W0023}
+\WarningFilter{minitoc(hints)}{W0099}
+\WarningFilter{minitoc(hints)}{W0030}
+\WarningFilter{minitoc(hints)}{W0028}
+\WarningFilter{blindtext}{}
+
+
+\renewcommand\arraystretch{1.2} % augment the height of lines in tables
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%      Titles format
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[explicit]{titlesec}
+
+\newcommand{\hsp}{\hspace{20pt}}
+%\titleformat{command}[shape]{format}{label}{sep}{befor-code}[after-code]
+
+% Chapter
+\titleformat{\chapter}[hang]
+	{\Huge\bfseries}
+	{\filright \Huge \normalfont \textcolor{colorthesis}{\thechapter}\hspace{5pt}}
+	{8pt}
+	{\textcolor{colorthesis}{\begin{tabular}[t]{@{\color{colorthesis}\vrule width 1.5pt}>{\hspace{10pt}}l} #1 \end{tabular}}}
+
+% Section
+\renewcommand{\thesection}{\Roman{section}}
+\titleformat{\section}[hang]{\Large\bfseries\color{colorthesis}}{\thesection}{15pt}{#1}[\hrule\vspace{5pt}]
+
+\definecolor{colorthesis2}{HTML}{3B1119}
+
+% Subsection
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\titleformat{\subsection}[hang]{\large\bfseries\color{colorthesis2}}{\thesubsection}{10pt}{#1}[]
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%         Minitoc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[french]{minitoc} % table of content per chapter
+%\mtcsettitle{secttoc}{Sectiofjemzoinj}
+\addto{\captionsfrench}{% Making babel aware of special titles
+  \renewcommand{\mtctitle}{}
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%      Bas de page 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+%\fancyfoot[zone]{contenu}
+\fancyfoot[RO]{\thepage}
+\fancyfoot[LE]{\thepage}
+
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[RO]{\thepage}%
+  \fancyfoot[LE]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}  % Line at the header invisible
+  \renewcommand{\footrulewidth}{0pt}  % Line at the footer visible
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%      Color Box
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[many]{tcolorbox}    	% for COLORED BOXES (tikz and xcolor included)
+\usepackage{setspace}               % for LINE SPACING
+
+\definecolor{main}{HTML}{66324F}    % setting main color to be used
+\definecolor{sub}{HTML}{BA6C98}     % setting sub color to be used
+\definecolor{mybrown}{HTML}{3B1119}
+
+\tcbset{
+    sharp corners,
+    colback = white,
+    before skip = 0.4cm,    % add extra space before the box
+    after skip = 0.5cm      % add extra space after the box
+}                           % setting global options for tcolorbox
+
+\newtcolorbox{boxE}{
+	fontupper = \color{mybrown}, % font colo
+    enhanced, % for a fancier setting,
+    boxrule = 0pt, % clearing the default rule
+    borderline = {0.75pt}{0pt}{main}, % outer line
+    borderline = {0.75pt}{2pt}{sub} % inner line
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%          Hyperlinks colors
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\hypersetup{colorlinks=true, %
+            allbordercolors=white,%
+            citecolor=main,%
+            linkcolor=sub,%
+            urlcolor=mybrown,%
+            filecolor=black}
+            
+
+            
+            
+            
+            
+            
+            

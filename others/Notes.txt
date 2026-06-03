@@ -1,0 +1,10 @@
+*Pour ceux qui utilisent latex en local, par ex avec Texmaker*
+Pour compiler avec la biblio pour chaque chapitre : 
+- Compiler intégralement la thèse 2 fois (main.tex)
+- Compiler chaque fichier de chapitre (ChapX.tex) 2 fois en biblio (F11)
+- Recompiler 3 fois le fichier main.tex (2 pour la biblio et 1 pour les backref)
+
+
+Pour les figures python, retouchées sur Illustrator en .svg, les réouvrir avec inkscape pour 
+les exporter en png, sinon le texte est trop fin...
+Ou enregistrer en .eps depuis python et utiliser direct Illustrator

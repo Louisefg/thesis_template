@@ -1,0 +1,36 @@
+%%%%%%%%%%%%%%%%
+% New commands %
+%%%%%%%%%%%%%%%%
+
+\newcommand{\esp}[1]{\mathbb{E}\left[ {#1} \right]}
+\newcommand{\ds}{\displaystyle}
+
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\prox}{\text{prox}}
+\renewcommand{\div}{\text{div}}
+\renewcommand{\phi}{\varphi}
+
+\newtheorem{theorem}{Théorème}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+%\newcommand{\ie}[1]{^{\left( #1 \right)}}   % for iterations in exponent
+
+\renewcommand{\citeyearpar}[1]{\textcolor{main}{(\citeyear{#1})}}
+\renewcommand{\cite}[1]{\citeauthor{#1} \citeyearpar{#1}}
+\newcommand{\citepp}[1]{\textcolor{main}{\citep{#1}}}
+
+\newcommand{\fref}[1]{figure~\ref{#1}}
+\newcommand{\eref}[1]{équation~\textcolor{sub}{(\ref{#1})}}
+\newcommand{\refp}[1]{\textcolor{sub}{(\ref{#1})}}
+
+
+% Text colored for draft/remark during the writing
+\definecolor{myred}{HTML}{DC2EAA}
+\newcommand{\addfig}[1]{\textcolor{myred}{[#1]}}
+\newcommand{\remark}[1]{\textcolor{myred}{#1}}
+
+
